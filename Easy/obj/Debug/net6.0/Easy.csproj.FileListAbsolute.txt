@@ -1,0 +1,15 @@
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\bin\Debug\net6.0\Easy.exe
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\bin\Debug\net6.0\Easy.deps.json
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\bin\Debug\net6.0\Easy.runtimeconfig.json
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\bin\Debug\net6.0\Easy.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\bin\Debug\net6.0\Easy.pdb
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.csproj.AssemblyReference.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.AssemblyInfoInputs.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.AssemblyInfo.cs
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.csproj.CoreCompileInputs.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\refint\Easy.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.pdb
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\Easy.genruntimeconfig.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Easy\obj\Debug\net6.0\ref\Easy.dll
