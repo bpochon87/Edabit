@@ -87,24 +87,7 @@ public class Program
         int negativeNum = userNum < 0 ? userNum : -userNum;
         System.Console.WriteLine($"Your number negative is { negativeNum }.");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     public static void Main(string[] args)
     {
         Program pr = new Program();

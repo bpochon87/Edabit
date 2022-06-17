@@ -1,0 +1,15 @@
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\bin\Debug\net6.0\Medium.exe
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\bin\Debug\net6.0\Medium.deps.json
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\bin\Debug\net6.0\Medium.runtimeconfig.json
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\bin\Debug\net6.0\Medium.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\bin\Debug\net6.0\Medium.pdb
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.csproj.AssemblyReference.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.AssemblyInfoInputs.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.AssemblyInfo.cs
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.csproj.CoreCompileInputs.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\refint\Medium.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.pdb
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\Medium.genruntimeconfig.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Medium\obj\Debug\net6.0\ref\Medium.dll
