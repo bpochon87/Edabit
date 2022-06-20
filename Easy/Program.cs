@@ -111,6 +111,22 @@ public class Program
 
     }
 
+    // Create a function that counts how many D's are in a sentence.
+    public void CountDs()
+    {
+        string str = "Today was a day unlike any other day.";
+        int counter = 0;
+        char[] charArr = str.ToCharArray();
+        for (int i = 0; i < charArr.Length; i++)
+        {
+            if (charArr[i] == 'D' || charArr[i] == 'd')
+            {
+                counter ++;
+            }
+        }
+        Console.WriteLine($"The number of dees is {counter}.");
+    }
+
 
 
     

@@ -23,6 +23,11 @@ public class Program
         Console.WriteLine($"{string.Join(", ", multiplesArray)}");
     }
 
+    // June 17, 2022
+    // Medium
+
+    
+
 
 
     public static void Main()
