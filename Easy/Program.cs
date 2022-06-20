@@ -87,6 +87,33 @@ public class Program
         int negativeNum = userNum < 0 ? userNum : -userNum;
         System.Console.WriteLine($"Your number negative is { negativeNum }.");
     }
+
+    // June 19, 2022
+    // Easy
+
+    // An overlapped clap is a clap which starts but doesn't finish, as in "ClaClap" (the first clap is
+    // cut short and there are overall 2 claps). Given a string of what the overlapping claps sounded
+    // like, return how many claps were made in total.
+
+    public void CountClaps()
+    {
+        string txt = "ClaClaClaClaClap";
+        int counter = 0;
+        char[] charArr = txt.ToCharArray();
+        for (int i = 0; i < charArr.Length; i++)
+        {
+            if (Char.IsUpper(charArr[i]) == true)
+            {
+                counter++;
+            }
+        }
+        Console.WriteLine($"The number of claps is {counter}.");
+
+    }
+
+
+
+    
     
     public static void Main(string[] args)
     {
@@ -96,6 +123,7 @@ public class Program
         pr.SortNumAscending();
         pr.DividesEvenly();
         pr.ReturnNegative();
+        pr.CountClaps();
     }
 
 
