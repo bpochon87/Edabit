@@ -23,17 +23,36 @@ public class Program
         Console.WriteLine($"{string.Join(", ", multiplesArray)}");
     }
 
-    // June 17, 2022
+    // June 22, 2022
     // Medium
 
+    // Create a function that takes a single string as argument and returns an ordered array 
+    // containing the indices of all capital letters in the string.
+
+    public void IndexOfCapitals()
+    {
+        string str = "HeLLo THEre.";
+
+        List<int> capitalIndicesList = new List<int>();
+
+        for (int i = 0; i < str.Length; i++)
+        {
+            if (Char.IsUpper(str[i]))
+            {
+                int capitalIndex = str.IndexOf(str[i]);
+                capitalIndicesList.Add(capitalIndex);
+            }
+        }
+        int[] capitalIndicesArray = capitalIndicesList.ToArray();
+        System.Console.WriteLine($"The indices for capital letter in the string are { String.Join(", ", capitalIndicesArray)} ");
+    }
+
     
-
-
-
     public static void Main()
     {
         Program pr = new Program();
         pr.ArrayOfMultiples();
+        pr.IndexOfCapitals();
     }
 
 
