@@ -127,6 +127,22 @@ public class Program
         Console.WriteLine($"The number of dees is {counter}.");
     }
 
+    // Create a function that takes an array of strings and returns the words that are exactly four letters.
+    public void isFourLetter()
+    {
+        // Array to check four letter names for.
+        string[] arr = new string[] {"Ryan", "Kieran", "Jason", "Matt"};
+        
+        List<string> fourLetterList = new List<string> {};
+        List<string> nameList = arr.ToList();
+        IEnumerable<string> query = nameList.Where(x => x.Length == 4);
+
+        foreach (string name in query)
+        {
+            Console.WriteLine(name);
+        }
+    }
+
 
 
     
@@ -140,6 +156,7 @@ public class Program
         pr.DividesEvenly();
         pr.ReturnNegative();
         pr.CountClaps();
+        pr.isFourLetter();
     }
 
 
