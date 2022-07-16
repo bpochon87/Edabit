@@ -128,7 +128,7 @@ public class Program
     }
 
     // Create a function that takes an array of strings and returns the words that are exactly four letters.
-    public void isFourLetter()
+    public void IsFourLetter()
     {
         // Array to check four letter names for.
         string[] arr = new string[] {"Ryan", "Kieran", "Jason", "Matt"};
@@ -143,6 +143,45 @@ public class Program
         }
     }
 
+    // July 17, 2022
+
+    // Create a function that takes an array of numbers and returns the largest.
+    // The easy way would be to return arr.Max(), using System.Linq;
+    // However, I challenged myself to do it manually.
+    public void FindLargestNum()
+    {
+        int[] arr = new int[] {23, 53, 21, 0, 31, 85, 200};
+        int biggestNum = 0;
+        foreach (int num in arr)
+        {
+            if (num > biggestNum)
+            {
+                biggestNum = num;
+            }
+        }
+        Console.WriteLine($"The biggest number is {biggestNum}.");
+    }
+
+    // Write a function that takes two numbers and a mathematical operator and returns the result.
+
+    public void Calculate()
+    {
+        int num1 = 10;
+        int num2 = 5;
+        string operation = "*";
+
+        // I liked using nested ternary operators here.
+        int result = operation == "+" ? num1 + num2 :
+        operation == "-" ? num1 - num2 :
+        operation == "*" ? num1 * num2 :
+        operation == "/" ? num1 / num2 :
+        operation == "%" ? num1 % num2 : 0;
+
+        System.Console.WriteLine($"The result of {num1} {operation} {num2} is {result}.");
+    }
+
+
+
 
 
     
@@ -156,7 +195,9 @@ public class Program
         pr.DividesEvenly();
         pr.ReturnNegative();
         pr.CountClaps();
-        pr.isFourLetter();
+        pr.IsFourLetter();
+        pr.FindLargestNum();
+        pr.Calculate();
     }
 
 
