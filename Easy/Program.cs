@@ -180,6 +180,62 @@ public class Program
         System.Console.WriteLine($"The result of {num1} {operation} {num2} is {result}.");
     }
 
+    // July 28, 2022
+
+    // Create a function that takes a string and calculates number of letters and digits within it.
+    public void CountDigitsLetters()
+    {
+        string str = "Ajp072 jnv732 fn7c3";
+        str.ToLower();
+
+        int digitCount = 0;
+        int letterCount = 0;
+
+        char[] charDigArr = str.ToCharArray();
+
+        for(int i = 0; i < charDigArr.Length; i++)
+        {
+            if(Char.IsDigit(charDigArr[i]) == true)
+            {
+                digitCount++;
+            }
+            else if(charDigArr[i] == ' ')
+            {
+                continue;
+            }
+            else
+            {
+                letterCount++;
+            }
+        }
+        Console.WriteLine($"Letter count is {letterCount} \nNumber count is {digitCount}");
+    }
+
+    // Confirm that the input is a zip code consisting of five consecutive digits.
+    public void ZipCode()
+    {
+        string zip = "69153";
+
+        if(zip.Length == 5)
+        {
+            for(int i = 0; i < zip.Length; i++)
+            {
+                if(Char.IsDigit(zip[i]) == true && zip[i] != ' ')
+                {
+                    continue;
+                }
+                else
+                {
+                    System.Console.WriteLine($"{zip} isn't a zip code.");;
+                }
+            }
+            System.Console.WriteLine($"{zip} is a zip code.");;
+        }
+        else
+        {
+            System.Console.WriteLine($"{zip} isn't a zip code.");;
+        }
+    }
 
 
 
@@ -189,15 +245,17 @@ public class Program
     public static void Main(string[] args)
     {
         Program pr = new Program();
-        pr.Factorial();
-        pr.FizzBuzz();
-        pr.SortNumAscending();
-        pr.DividesEvenly();
-        pr.ReturnNegative();
-        pr.CountClaps();
-        pr.IsFourLetter();
-        pr.FindLargestNum();
-        pr.Calculate();
+        // pr.Factorial();
+        // pr.FizzBuzz();
+        // pr.SortNumAscending();
+        // pr.DividesEvenly();
+        // pr.ReturnNegative();
+        // pr.CountClaps();
+        // pr.IsFourLetter();
+        // pr.FindLargestNum();
+        // pr.Calculate();
+        // pr.CountDigitsLetters();
+        pr.ZipCode();
     }
 
 
