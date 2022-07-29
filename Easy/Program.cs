@@ -237,6 +237,22 @@ public class Program
         }
     }
 
+    // July 29, 2022
+
+    // Given a fraction as a string, return whether or not it is greater than 1 when evaluated.
+
+    void GreaterThanOne()
+    {
+        string str = "9/10";
+
+        string[] arr = str.Split("/");
+        int[] numbers = Array.ConvertAll(arr, s => int.Parse(s));
+
+        bool greaterThan = numbers[0] > numbers[1] ? true : false;
+
+        System.Console.WriteLine($"Is the string-fraction {str} greater than one? This is {greaterThan}.");
+    }
+
 
 
 
@@ -255,7 +271,8 @@ public class Program
         // pr.FindLargestNum();
         // pr.Calculate();
         // pr.CountDigitsLetters();
-        pr.ZipCode();
+        // pr.ZipCode();
+        pr.GreaterThanOne();
     }
 
 
