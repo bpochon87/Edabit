@@ -253,6 +253,45 @@ public class Program
         System.Console.WriteLine($"Is the string-fraction {str} greater than one? This is {greaterThan}.");
     }
 
+    // August 2, 2022
+
+    // Write a function that removes any non-letters from a string, returning a well-known film title. 
+
+    void FindMovieTitle()
+    {
+        string str = "^,]%4B|@56a![0{2m>b1&4i4";
+        string movieTitle = "";
+
+        char[] letters = str.ToCharArray();
+        foreach(char c in letters)
+        {
+            if(Char.IsLetter(c) == true)
+            {
+                movieTitle += c;
+            }
+        }
+        System.Console.WriteLine($"The title of the movie is {movieTitle}");
+    }
+
+    // Count the amount of ones in the binary representation of an integer. 
+    // For example, since 12 is 1100 in binary, the return value should be 2.
+    void CountOnes()
+    {
+        int i = 456789;
+        int onesCount = 0;
+        string binary = Convert.ToString(i, 2);
+        
+        for(int j = 0; j < binary.Length; j++)
+        {
+            if(binary[j] == '1')
+            {
+                onesCount += 1;
+            }
+        }
+        Console.WriteLine($"The number of 1s in the binary form of {i} is {onesCount}.");
+
+    }
+
 
 
 
@@ -272,7 +311,9 @@ public class Program
         // pr.Calculate();
         // pr.CountDigitsLetters();
         // pr.ZipCode();
-        pr.GreaterThanOne();
+        // pr.GreaterThanOne();
+        // pr.FindMovieTitle();
+        pr.CountOnes();
     }
 
 
