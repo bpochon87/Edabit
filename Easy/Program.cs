@@ -289,7 +289,21 @@ public class Program
             }
         }
         Console.WriteLine($"The number of 1s in the binary form of {i} is {onesCount}.");
+    }
 
+    // Create a function that takes an array of numbers and returns an array
+    // where each number is the sum of itself + all previous numbers in the array.
+
+    // In-place mutation because it's being changed as we go. Very efficient with memory.
+    void CumulativeSum()
+    {
+        double[] arr = new double[] { 2, 5, 3, 1, 6, 4, 3, 6 };
+        for(int i = 1; i < arr.Length; i++)
+        {
+            arr[i] = arr[i] + arr[i - 1];
+        }
+
+        System.Console.WriteLine($"The cumulatively-added array is: {String.Join(", ", arr)}");
     }
 
 
@@ -313,7 +327,8 @@ public class Program
         // pr.ZipCode();
         // pr.GreaterThanOne();
         // pr.FindMovieTitle();
-        pr.CountOnes();
+        // pr.CountOnes();
+        pr.CumulativeSum();
     }
 
 

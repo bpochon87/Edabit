@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\easy\\Easy.csproj": {}
+    "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\Easy\\Easy.csproj": {}
   },
   "projects": {
-    "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\easy\\Easy.csproj": {
+    "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\Easy\\Easy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\easy\\Easy.csproj",
+        "projectUniqueName": "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\Easy\\Easy.csproj",
         "projectName": "Easy",
-        "projectPath": "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\easy\\Easy.csproj",
+        "projectPath": "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\Easy\\Easy.csproj",
         "packagesPath": "C:\\Users\\bpoch\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\easy\\obj\\",
+        "outputPath": "D:\\Users\\bpoch\\Documents\\GitHub\\Edabit\\Easy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
