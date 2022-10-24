@@ -48,32 +48,59 @@ public class Program
     //     System.Console.WriteLine($"The indices for capital letter in the string are { String.Join(", ", capitalIndicesArray)} ");
     // }
 
-    // October 20, 2022
+    // // October 20, 2022
+    // // Medium
+
+    // // You're given a string of words. You need to find the word "Nemo", and return a string like this: 
+    // // "I found Nemo at [the order of the word you find Nemo]!". If you can't find Nemo, return "I can't find Nemo :(".
+
+    // public void FindNemo()
+    // {
+    //     string str = "I am Ne mo Nemo !";
+    //     string[] arr = str.Split(' ');
+    //     int currPos = 1;
+
+    //     foreach (string s in arr)
+    //     {
+    //         if (s == "Nemo")
+    //         {
+    //             System.Console.WriteLine($"I found Nemo at {currPos}!");
+    //         }
+    //         else
+    //         {
+    //             currPos++;
+    //         }
+    //     }
+    //     System.Console.WriteLine("I can't find Nemo :(");
+    //     Console.ReadLine();
+    // }
+
+    // October 24, 2022
     // Medium
 
-    // You're given a string of words. You need to find the word "Nemo", and return a string like this: 
-    // "I found Nemo at [the order of the word you find Nemo]!". If you can't find Nemo, return "I can't find Nemo :(".
+    // Create a function that tests whether or not an integer is a perfect number. 
+    // A perfect number is a number that can be written as the sum of its factors,
+    // (equal to sum of its proper divisors) excluding the number itself.
 
-    public void FindNemo()
+    public void FactorsAddUp()
     {
-        string str = "I am Ne mo Nemo !";
-        string[] arr = str.Split(' ');
-        int currPos = 1;
+        int num = 6;
+        int[] factors = {1, 2, 3};
+        int sum = 0;
 
-        foreach (string s in arr)
+        for (int i = 1; i < num; i++)
         {
-            if (s == "Nemo")
+            if (num % i == 0)
             {
-                System.Console.WriteLine($"I found Nemo at {currPos}!");
+                sum += i;
             }
             else
             {
-                currPos++;
+                continue;
             }
         }
-        System.Console.WriteLine("I can't find Nemo :(");
-        Console.ReadLine();
-    }
+        System.Console.WriteLine(sum == num);
+    } 
 
     
     public static void Main()
@@ -81,7 +108,8 @@ public class Program
         Program pr = new Program();
         // pr.ArrayOfMultiples();
         // pr.IndexOfCapitals();
-        pr.FindNemo();
+        // pr.FindNemo();
+        pr.FactorsAddUp();
     }
 
 
