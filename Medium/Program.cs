@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 // June 16, 2022
 // Medium
@@ -129,16 +131,52 @@ public class Program
     //     System.Console.WriteLine(difference);
     // }
 
-    // October 26, 2022
+    // // October 26, 2022
+    // // Medium
+
+    // // Without using conditionals, ternary operators, etc., flip one to zero and zero to one.
+
+    // public int Flip(int y)
+    // {
+    //     return Convert.ToInt32(!(Convert.ToBoolean(y)));
+    // }
+
+    // // October 27, 2022
+    // // Medium
+
+    // // Create a function that takes a number as an argument. Add up all the numbers from 1 to the 
+    // // number you passed to the function. For example, if the input is 4 then your function should 
+    // // return 10 because 1 + 2 + 3 + 4 = 10.
+
+    // public int AddUp(int num) 
+    // {
+    //     int sum = 0;
+    //     int i = 1;
+        
+    //     while (i <= num)
+    //     {
+    //         sum += num - i;
+    //         i++;
+    //     }
+    //     return sum;
+    // }
+
+    // November 1, 2022
     // Medium
 
-    // Without using conditionals, ternary operators, etc., flip one to zero and zero to one.
+    // Remove special characters. Only spaces, upper and lowercase chars, and dash and underscore are allowed.
 
-    public int Flip(int y)
+    public void RemoveSpecialCharacters()
     {
-        return Convert.ToInt32(!(Convert.ToBoolean(y)));
-    }
+        string str = "%fd76$fd(-)6GvKlO.";
+        string pattern = "[^A-Za-z\\s_-]";
+        string replacement = "";
 
+        Regex rx = new Regex(pattern);
+        string result = rx.Replace(str, replacement);
+        
+        System.Console.WriteLine(result);
+    }
     
     public static void Main()
     {
@@ -148,8 +186,11 @@ public class Program
         // pr.FindNemo();
         // pr.FactorsAddUp();
         // pr.LargestGap();
-        Console.WriteLine(pr.Flip(0));
-        Console.ReadLine();
+        // Console.WriteLine(pr.Flip(0));
+        // Console.ReadLine();
+        // pr.AddUp(4);
+        pr.RemoveSpecialCharacters();
+
     }
 
 
