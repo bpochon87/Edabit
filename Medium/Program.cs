@@ -161,23 +161,61 @@ public class Program
     //     return sum;
     // }
 
-    // November 1, 2022
+    // // November 1, 2022
+    // // Medium
+
+    // // Remove special characters. Only spaces, upper and lowercase chars, and dash and underscore are allowed.
+
+    // public void RemoveSpecialCharacters()
+    // {
+    //     string str = "%fd76$fd(-)6GvKlO.";
+    //     string pattern = "[^A-Za-z\\s_-]";
+    //     string replacement = "";
+
+    //     Regex rx = new Regex(pattern);
+    //     string result = rx.Replace(str, replacement);
+        
+    //     System.Console.WriteLine(result);
+    // }
+    
+    // // November 2, 2022
+    // // Medium
+
+    // // Find all substrings of "potato" and return as an int.
+
+    // public void Potato()
+    // {
+    //     string test = "onepotatotwopotatothreepotato";
+
+    //     string pattern = "(?:potato)";
+    //     int count = 0;
+
+    //     foreach (Match match in Regex.Matches(test, pattern))
+    //     {
+    //         count += 1;
+    //     }
+    //     System.Console.WriteLine(count);
+    // }
+
+    // November 2, 2022
     // Medium
 
-    // Remove special characters. Only spaces, upper and lowercase chars, and dash and underscore are allowed.
+    // Given an integer, take each individual digit times the next: (133) = 1 * 3 * 3 = 9.
 
-    public void RemoveSpecialCharacters()
-    {
-        string str = "%fd76$fd(-)6GvKlO.";
-        string pattern = "[^A-Za-z\\s_-]";
-        string replacement = "";
+    // public void ReverseString()
+    // {
+    //     int test = 555;
 
-        Regex rx = new Regex(pattern);
-        string result = rx.Replace(str, replacement);
-        
-        System.Console.WriteLine(result);
-    }
-    
+    //     int product = 1;
+
+    //     while (test % 10 > 0)
+    //     {
+    //         product *= test % 10;
+    //         test /= 10;
+    //     }
+    //     System.Console.WriteLine(product);
+    // }
+
     public static void Main()
     {
         Program pr = new Program();
@@ -189,8 +227,9 @@ public class Program
         // Console.WriteLine(pr.Flip(0));
         // Console.ReadLine();
         // pr.AddUp(4);
-        pr.RemoveSpecialCharacters();
-
+        // pr.RemoveSpecialCharacters();
+        // pr.Potato();
+        // pr.ReverseString();
     }
 
 
