@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 // June 16, 2022
@@ -197,10 +198,10 @@ public class Program
     //     System.Console.WriteLine(count);
     // }
 
-    // November 2, 2022
-    // Medium
+    // // November 2, 2022
+    // // Medium
 
-    // Given an integer, take each individual digit times the next: (133) = 1 * 3 * 3 = 9.
+    // // Given an integer, take each individual digit times the next: (133) = 1 * 3 * 3 = 9.
 
     // public void ReverseString()
     // {
@@ -216,6 +217,43 @@ public class Program
     //     System.Console.WriteLine(product);
     // }
 
+    // November 3, 2022
+    // Medium
+
+    // 1) Reverse the string.
+    // 2) Replace vowels as follows: a=0; e=1; i=2; o=2; u=3;
+    // 3) Add "aca" to end of new string.
+
+    public void Codify()
+    {
+        string word = "karaca";
+
+        var reverseWord = new string(word.ToCharArray().Reverse().ToArray());
+		StringBuilder sb = new StringBuilder(reverseWord);
+		for (int i = 0; i < sb.Length; i++)
+		{
+            switch (sb[i])
+            {
+                case 'a':
+                    sb[i] = '0';
+                    break;
+                case 'e':
+                    sb[i] = '1';
+                    break;
+                case 'i':
+                    sb[i] = '2';
+                    break;
+                case 'o':
+                    sb[i] = '2';
+                    break;
+                case 'u':
+                    sb[i] = '3';
+                    break;
+            }
+        }
+        System.Console.WriteLine(sb + "aca");
+    }
+
     public static void Main()
     {
         Program pr = new Program();
@@ -230,6 +268,7 @@ public class Program
         // pr.RemoveSpecialCharacters();
         // pr.Potato();
         // pr.ReverseString();
+        pr.Codify();
     }
 
 
