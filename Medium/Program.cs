@@ -217,41 +217,68 @@ public class Program
     //     System.Console.WriteLine(product);
     // }
 
-    // November 3, 2022
+    // // November 3, 2022
+    // // Medium
+
+    // // 1) Reverse the string.
+    // // 2) Replace vowels as follows: a=0; e=1; i=2; o=2; u=3;
+    // // 3) Add "aca" to end of new string.
+
+    // public void Codify()
+    // {
+    //     string word = "karaca";
+
+    //     var reverseWord = new string(word.ToCharArray().Reverse().ToArray());
+	// 	StringBuilder sb = new StringBuilder(reverseWord);
+	// 	for (int i = 0; i < sb.Length; i++)
+	// 	{
+    //         switch (sb[i])
+    //         {
+    //             case 'a':
+    //                 sb[i] = '0';
+    //                 break;
+    //             case 'e':
+    //                 sb[i] = '1';
+    //                 break;
+    //             case 'i':
+    //                 sb[i] = '2';
+    //                 break;
+    //             case 'o':
+    //                 sb[i] = '2';
+    //                 break;
+    //             case 'u':
+    //                 sb[i] = '3';
+    //                 break;
+    //         }
+    //     }
+    //     System.Console.WriteLine(sb + "aca");
+    // }
+
+    // November 2, 2022
     // Medium
 
-    // 1) Reverse the string.
-    // 2) Replace vowels as follows: a=0; e=1; i=2; o=2; u=3;
-    // 3) Add "aca" to end of new string.
+    // Take each char of the string individually and accumulate by one. Add a dash afterwards. EXAMPLE: "abcd" = A-Bb-Ccc-Dddd
 
-    public void Codify()
+    public void Accum()
     {
-        string word = "karaca";
-
-        var reverseWord = new string(word.ToCharArray().Reverse().ToArray());
-		StringBuilder sb = new StringBuilder(reverseWord);
-		for (int i = 0; i < sb.Length; i++)
-		{
-            switch (sb[i])
+        string test = "abcd";
+        char[] arr = test.ToLower().ToCharArray();
+        string newStr = String.Empty;
+        
+        for (int i = 0, j = 1; i < arr.Length; i++)
+        {
+            if (i == arr.Length - 1)
             {
-                case 'a':
-                    sb[i] = '0';
-                    break;
-                case 'e':
-                    sb[i] = '1';
-                    break;
-                case 'i':
-                    sb[i] = '2';
-                    break;
-                case 'o':
-                    sb[i] = '2';
-                    break;
-                case 'u':
-                    sb[i] = '3';
-                    break;
+                newStr += arr[i].ToString().ToUpper() + new string(arr[i], j - 1);
+            }
+            else
+            {
+                newStr += arr[i].ToString().ToUpper() + new string(arr[i], j - 1) + "-";
+                j++;
             }
         }
-        System.Console.WriteLine(sb + "aca");
+        
+        System.Console.WriteLine(newStr);
     }
 
     public static void Main()
@@ -268,30 +295,7 @@ public class Program
         // pr.RemoveSpecialCharacters();
         // pr.Potato();
         // pr.ReverseString();
-        pr.Codify();
+        // pr.Codify();
+        pr.Accum();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
