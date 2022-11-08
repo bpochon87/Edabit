@@ -254,32 +254,65 @@ public class Program
     //     System.Console.WriteLine(sb + "aca");
     // }
 
-    // November 2, 2022
+    // // November 7, 2022
+    // // Medium
+
+    // // Take each char of the string individually and accumulate by one. Add a dash afterwards. EXAMPLE: "abcd" = A-Bb-Ccc-Dddd
+
+    // public void Accum()
+    // {
+    //     string test = "abcd";
+    //     char[] arr = test.ToLower().ToCharArray();
+    //     string newStr = String.Empty;
+        
+    //     for (int i = 0, j = 1; i < arr.Length; i++)
+    //     {
+    //         if (i == arr.Length - 1)
+    //         {
+    //             newStr += arr[i].ToString().ToUpper() + new string(arr[i], j - 1);
+    //         }
+    //         else
+    //         {
+    //             newStr += arr[i].ToString().ToUpper() + new string(arr[i], j - 1) + "-";
+    //             j++;
+    //         }
+    //     }
+        
+    //     System.Console.WriteLine(newStr);
+    // }
+
+    // November 8, 2022
     // Medium
 
-    // Take each char of the string individually and accumulate by one. Add a dash afterwards. EXAMPLE: "abcd" = A-Bb-Ccc-Dddd
+    // Capitalize each word in the string.
 
-    public void Accum()
+    public void MakeTitle()
     {
-        string test = "abcd";
-        char[] arr = test.ToLower().ToCharArray();
-        string newStr = String.Empty;
-        
-        for (int i = 0, j = 1; i < arr.Length; i++)
+        string test = "here we GO aGAIN.";
+        string testLower = test.ToLower();
+        StringBuilder sb = new StringBuilder(testLower);
+
+        // char[] arr = test.ToLower().ToCharArray();
+        for (int i = 0; i < sb.Length; i++)
         {
-            if (i == arr.Length - 1)
+            if (sb[i] == sb[0])
             {
-                newStr += arr[i].ToString().ToUpper() + new string(arr[i], j - 1);
+                sb.Replace(sb[i].ToString(), sb[i].ToString().ToUpper(), 0, 1);
+
+            }
+            else if (sb[i] == ' ')
+            {
+                sb.Replace(sb[i + 1].ToString(), sb[i + 1].ToString().ToUpper(), i + 1, 1);
             }
             else
             {
-                newStr += arr[i].ToString().ToUpper() + new string(arr[i], j - 1) + "-";
-                j++;
+                continue;
             }
         }
-        
-        System.Console.WriteLine(newStr);
+        System.Console.WriteLine(sb);
     }
+
+
 
     public static void Main()
     {
@@ -296,6 +329,7 @@ public class Program
         // pr.Potato();
         // pr.ReverseString();
         // pr.Codify();
-        pr.Accum();
+        // pr.Accum();
+        pr.MakeTitle();
     }
 }
