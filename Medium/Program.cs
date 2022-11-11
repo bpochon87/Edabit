@@ -286,30 +286,59 @@ public class Program
 
     // Capitalize each word in the string.
 
-    public void MakeTitle()
+    // public void MakeTitle()
+    // {
+    //     string test = "here we GO aGAIN.";
+    //     string testLower = test.ToLower();
+    //     StringBuilder sb = new StringBuilder(testLower);
+
+    //     // char[] arr = test.ToLower().ToCharArray();
+    //     for (int i = 0; i < sb.Length; i++)
+    //     {
+    //         if (sb[i] == sb[0])
+    //         {
+    //             sb.Replace(sb[i].ToString(), sb[i].ToString().ToUpper(), 0, 1);
+
+    //         }
+    //         else if (sb[i] == ' ')
+    //         {
+    //             sb.Replace(sb[i + 1].ToString(), sb[i + 1].ToString().ToUpper(), i + 1, 1);
+    //         }
+    //         else
+    //         {
+    //             continue;
+    //         }
+    //     }
+    //     System.Console.WriteLine(sb);
+    // }
+
+    // November 11, 2022
+    // Medium
+
+    // Through logic, confirm the string is an email address and return true or false.
+
+    public bool IsEmail(string str)
     {
-        string test = "here we GO aGAIN.";
-        string testLower = test.ToLower();
-        StringBuilder sb = new StringBuilder(testLower);
-
-        // char[] arr = test.ToLower().ToCharArray();
-        for (int i = 0; i < sb.Length; i++)
+        if (str == "" || str.Contains("@") != true)
         {
-            if (sb[i] == sb[0])
-            {
-                sb.Replace(sb[i].ToString(), sb[i].ToString().ToUpper(), 0, 1);
-
-            }
-            else if (sb[i] == ' ')
-            {
-                sb.Replace(sb[i + 1].ToString(), sb[i + 1].ToString().ToUpper(), i + 1, 1);
-            }
-            else
-            {
-                continue;
-            }
+            return false;
         }
-        System.Console.WriteLine(sb);
+        else
+        {
+            char[] arr = str.ToCharArray();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (str[0] == '@')
+                {
+                    return false;
+                }
+                if (str[str.Length - 4] != '.')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 
 
@@ -330,6 +359,7 @@ public class Program
         // pr.ReverseString();
         // pr.Codify();
         // pr.Accum();
-        pr.MakeTitle();
+        // pr.MakeTitle();
+        Console.WriteLine(pr.IsEmail("ann@edabit.com"));
     }
 }
