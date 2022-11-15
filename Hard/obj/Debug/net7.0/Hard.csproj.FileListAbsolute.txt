@@ -1,0 +1,15 @@
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\bin\Debug\net7.0\Hard.exe
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\bin\Debug\net7.0\Hard.deps.json
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\bin\Debug\net7.0\Hard.runtimeconfig.json
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\bin\Debug\net7.0\Hard.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\bin\Debug\net7.0\Hard.pdb
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.csproj.AssemblyReference.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.AssemblyInfoInputs.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.AssemblyInfo.cs
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.csproj.CoreCompileInputs.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\refint\Hard.dll
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.pdb
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\Hard.genruntimeconfig.cache
+D:\Users\bpoch\Documents\GitHub\Edabit\Hard\obj\Debug\net7.0\ref\Hard.dll
