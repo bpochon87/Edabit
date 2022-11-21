@@ -55,25 +55,59 @@ public class Program
     //     return string.Join("", arrCen);
     // }
 
-    // November 18, 2022
+    // // November 18, 2022
+    // // Hard
+
+    // // Create a function that takes an array of integers and removes the smallest value.
+
+    // public int[] RemoveSmallest(int[] values)
+    // {
+    //     // [] => list
+    //     // remove smallest int
+    //     // list => []
+
+    //     List<int> numList = values.ToList();
+    //     var smallestInt = numList.Min();
+    //     numList.Remove(smallestInt);
+    //     int[] newArr = numList.ToArray();
+    //     return newArr;
+    // }
+
+    // November 21, 2022
     // Hard
 
-    // Create a function that takes an array of integers and removes the smallest value.
+    // Complete all questions.
+    // Max time to complete: 120 min
+    // Max time very easy 5 min.
+    // Max time easy 10 min.
+    // Max time medium 15 min.
+    // Max time hard 20 min.
+    // test == Interview(net int[] {very easy, very easy, easy easy, medium, medium, hard, hard})
 
-    public int[] RemoveSmallest(int[] values)
+    public string Interview(int[] arr, int totalMin)
     {
-        // [] => list
-        // remove smallest int
-        // list => []
-
-        List<int> numList = values.ToList();
-        var smallestInt = numList.Min();
-        numList.Remove(smallestInt);
-        int[] newArr = numList.ToArray();
-        return newArr;
+        if (
+            totalMin <= 120
+            && arr.Length == 8
+            && arr[0] <= 5
+            && arr[1] <= 5
+            && arr[2] <= 10
+            && arr[3] <= 10
+            && arr[4] <= 15
+            && arr[5] <= 15
+            && arr[6] <= 20
+            && arr[7] <= 20
+        )
+        {
+            return "qualified";
+        }
+        else
+        {
+            return "disqualified";
+        }
     }
 
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         Program pr = new Program();
 
@@ -98,6 +132,7 @@ public class Program
 
         // Console.WriteLine(pr.Censored("Wh*r* d*d my v*w*ls g*?", "eeioeo"));
         // Console.WriteLine(pr.Censored("Ch**s*, Gr*mm*t -- ch**s*", "eeeoieee"));
-        Console.WriteLine(pr.RemoveSmallest(new int[] { 1, 2, 3, 4, 5 }));
+        // Console.WriteLine(pr.RemoveSmallest(new int[] { 1, 2, 3, 4, 5 }));
+        Console.WriteLine(pr.Interview(new int[] { 5, 5, 10, 15, 15, 20, 20 }, 120));
     }
 }

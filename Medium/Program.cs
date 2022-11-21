@@ -30,7 +30,7 @@ public class Program
     // // June 22, 2022
     // // Medium
 
-    // // Create a function that takes a single string as argument and returns an ordered array 
+    // // Create a function that takes a single string as argument and returns an ordered array
     // // containing the indices of all capital letters in the string.
 
     // public void IndexOfCapitals()
@@ -54,7 +54,7 @@ public class Program
     // // October 20, 2022
     // // Medium
 
-    // // You're given a string of words. You need to find the word "Nemo", and return a string like this: 
+    // // You're given a string of words. You need to find the word "Nemo", and return a string like this:
     // // "I found Nemo at [the order of the word you find Nemo]!". If you can't find Nemo, return "I can't find Nemo :(".
 
     // public void FindNemo()
@@ -81,7 +81,7 @@ public class Program
     // // October 24, 2022
     // // Medium
 
-    // // Create a function that tests whether or not an integer is a perfect number. 
+    // // Create a function that tests whether or not an integer is a perfect number.
     // // A perfect number is a number that can be written as the sum of its factors,
     // // (equal to sum of its proper divisors) excluding the number itself.
 
@@ -116,7 +116,7 @@ public class Program
 
     //     Array.Sort(arr);
     //     int difference = 0;
-        
+
     //     for (int i = 0, j = 1; i < arr.Length - 1; i++, j++)
     //     {
     //         int currGap = Math.Abs(arr[i] - arr[j]);
@@ -145,15 +145,15 @@ public class Program
     // // October 27, 2022
     // // Medium
 
-    // // Create a function that takes a number as an argument. Add up all the numbers from 1 to the 
-    // // number you passed to the function. For example, if the input is 4 then your function should 
+    // // Create a function that takes a number as an argument. Add up all the numbers from 1 to the
+    // // number you passed to the function. For example, if the input is 4 then your function should
     // // return 10 because 1 + 2 + 3 + 4 = 10.
 
-    // public int AddUp(int num) 
+    // public int AddUp(int num)
     // {
     //     int sum = 0;
     //     int i = 1;
-        
+
     //     while (i <= num)
     //     {
     //         sum += num - i;
@@ -175,10 +175,10 @@ public class Program
 
     //     Regex rx = new Regex(pattern);
     //     string result = rx.Replace(str, replacement);
-        
+
     //     System.Console.WriteLine(result);
     // }
-    
+
     // // November 2, 2022
     // // Medium
 
@@ -229,9 +229,9 @@ public class Program
     //     string word = "karaca";
 
     //     var reverseWord = new string(word.ToCharArray().Reverse().ToArray());
-	// 	StringBuilder sb = new StringBuilder(reverseWord);
-	// 	for (int i = 0; i < sb.Length; i++)
-	// 	{
+    // 	StringBuilder sb = new StringBuilder(reverseWord);
+    // 	for (int i = 0; i < sb.Length; i++)
+    // 	{
     //         switch (sb[i])
     //         {
     //             case 'a':
@@ -264,7 +264,7 @@ public class Program
     //     string test = "abcd";
     //     char[] arr = test.ToLower().ToCharArray();
     //     string newStr = String.Empty;
-        
+
     //     for (int i = 0, j = 1; i < arr.Length; i++)
     //     {
     //         if (i == arr.Length - 1)
@@ -277,7 +277,7 @@ public class Program
     //             j++;
     //         }
     //     }
-        
+
     //     System.Console.WriteLine(newStr);
     // }
 
@@ -312,36 +312,57 @@ public class Program
     //     System.Console.WriteLine(sb);
     // }
 
-    // November 11, 2022
+    // // November 11, 2022
+    // // Medium
+
+    // // Through logic, confirm the string is an email address and return true or false.
+
+    // public bool IsEmail(string str)
+    // {
+    //     if (str == "" || str.Contains("@") != true)
+    //     {
+    //         return false;
+    //     }
+    //     else
+    //     {
+    //         char[] arr = str.ToCharArray();
+    //         for (int i = 0; i < arr.Length; i++)
+    //         {
+    //             if (str[0] == '@')
+    //             {
+    //                 return false;
+    //             }
+    //             if (str[str.Length - 4] != '.')
+    //             {
+    //                 return false;
+    //             }
+    //         }
+    //         return true;
+    //     }
+    // }
+
+    // November 18, 2022
     // Medium
 
-    // Through logic, confirm the string is an email address and return true or false.
+    // Check string to see if it's a palindrome.
 
-    public bool IsEmail(string str)
+    public bool IsPalindrome(string str)
     {
-        if (str == "" || str.Contains("@") != true)
+        str.ToLower();
+        string newStr = String.Join("", str.Where(char.IsLetterOrDigit));
+        for (int i = 0, j = newStr.Length - 1; i < newStr.Length; i++, j--)
         {
-            return false;
-        }
-        else
-        {
-            char[] arr = str.ToCharArray();
-            for (int i = 0; i < arr.Length; i++)
+            if (newStr[i] == newStr[j])
             {
-                if (str[0] == '@')
-                {
-                    return false;
-                }
-                if (str[str.Length - 4] != '.')
-                {
-                    return false;
-                }
+                continue;
             }
-            return true;
+            else
+            {
+                return false;
+            }
         }
+        return true;
     }
-
-
 
     public static void Main()
     {
@@ -360,6 +381,7 @@ public class Program
         // pr.Codify();
         // pr.Accum();
         // pr.MakeTitle();
-        Console.WriteLine(pr.IsEmail("ann@edabit.com"));
+        // Console.WriteLine(pr.IsEmail("ann@edabit.com"));
+        Console.WriteLine(pr.IsPalindrome("Neuquen"));
     }
 }
