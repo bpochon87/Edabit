@@ -37,7 +37,7 @@ public class Program
     // // November 17, 2022
     // // Hard
 
-    // // We're given a string with vowels censored with *. We're given a second string with the vowels that were censored in sequential order. Reinsert the second string vowels into the first censored string.
+    // // We're given a string with vowels censored with *. We're given a second string with the vowels that were censored in sequential order.     Reinsert the second string vowels into the first censored string.
 
     // public string Censored(string censor, string vowels)
     // {
@@ -73,38 +73,63 @@ public class Program
     //     return newArr;
     // }
 
-    // November 21, 2022
+    // // November 21, 2022
+    // // Hard
+
+    // // Complete all questions.
+    // // Max time to complete: 120 min
+    // // Max time very easy 5 min.
+    // // Max time easy 10 min.
+    // // Max time medium 15 min.
+    // // Max time hard 20 min.
+    // // test == Interview(net int[] {very easy, very easy, easy easy, medium, medium, hard, hard})
+
+    // public string Interview(int[] arr, int totalMin)
+    // {
+    //     if (
+    //         totalMin <= 120
+    //         && arr.Length == 8
+    //         && arr[0] <= 5
+    //         && arr[1] <= 5
+    //         && arr[2] <= 10
+    //         && arr[3] <= 10
+    //         && arr[4] <= 15
+    //         && arr[5] <= 15
+    //         && arr[6] <= 20
+    //         && arr[7] <= 20
+    //     )
+    //     {
+    //         return "qualified";
+    //     }
+    //     else
+    //     {
+    //         return "disqualified";
+    //     }
+    // }
+
+    // November 22, 2022
     // Hard
 
-    // Complete all questions.
-    // Max time to complete: 120 min
-    // Max time very easy 5 min.
-    // Max time easy 10 min.
-    // Max time medium 15 min.
-    // Max time hard 20 min.
-    // test == Interview(net int[] {very easy, very easy, easy easy, medium, medium, hard, hard})
+    // Take in string. Reverse words that are >= five chars long. Return new string.
 
-    public string Interview(int[] arr, int totalMin)
+    public string ReversedString(string str)
     {
-        if (
-            totalMin <= 120
-            && arr.Length == 8
-            && arr[0] <= 5
-            && arr[1] <= 5
-            && arr[2] <= 10
-            && arr[3] <= 10
-            && arr[4] <= 15
-            && arr[5] <= 15
-            && arr[6] <= 20
-            && arr[7] <= 20
-        )
+        // Split string into separate words
+        string[] words = str.Split(' ');
+        // Traverse through each word in array.
+        for (int i = 0; i < words.Length; i++)
         {
-            return "qualified";
+            // If word is >= 5 chars, reverse.
+            if (words[i].Length > 4)
+            {
+                words[i] = new string(words[i].ToCharArray().Reverse().ToArray());
+            }
+            else
+            {
+                continue;
+            }
         }
-        else
-        {
-            return "disqualified";
-        }
+        return string.Join(" ", words);
     }
 
     public static void Main(string[] args)
@@ -133,6 +158,7 @@ public class Program
         // Console.WriteLine(pr.Censored("Wh*r* d*d my v*w*ls g*?", "eeioeo"));
         // Console.WriteLine(pr.Censored("Ch**s*, Gr*mm*t -- ch**s*", "eeeoieee"));
         // Console.WriteLine(pr.RemoveSmallest(new int[] { 1, 2, 3, 4, 5 }));
-        Console.WriteLine(pr.Interview(new int[] { 5, 5, 10, 15, 15, 20, 20 }, 120));
+        // Console.WriteLine(pr.Interview(new int[] { 5, 5, 10, 15, 15, 20, 20 }, 120));
+        Console.WriteLine(pr.ReversedString("This is a typical sentence."));
     }
 }
