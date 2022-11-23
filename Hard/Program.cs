@@ -107,29 +107,40 @@ public class Program
     //     }
     // }
 
-    // November 22, 2022
+    // // November 22, 2022
+    // // Hard
+
+    // // Take in string. Reverse words that are >= five chars long. Return new string.
+
+    // public string ReversedString(string str)
+    // {
+    //     // Split string into separate words
+    //     string[] words = str.Split(' ');
+    //     // Traverse through each word in array.
+    //     for (int i = 0; i < words.Length; i++)
+    //     {
+    //         // If word is >= 5 chars, reverse.
+    //         if (words[i].Length > 4)
+    //         {
+    //             words[i] = new string(words[i].ToCharArray().Reverse().ToArray());
+    //         }
+    //         else
+    //         {
+    //             continue;
+    //         }
+    //     }
+    //     return string.Join(" ", words);
+    // }
+
+    // November 23, 2022
     // Hard
 
-    // Take in string. Reverse words that are >= five chars long. Return new string.
+    // Confirm that a given string is a hex code that is six characters long, starts with #, and has A-Fa-f or digits.
 
-    public string ReversedString(string str)
+    public bool IsValidHexCode(string hex)
     {
-        // Split string into separate words
-        string[] words = str.Split(' ');
-        // Traverse through each word in array.
-        for (int i = 0; i < words.Length; i++)
-        {
-            // If word is >= 5 chars, reverse.
-            if (words[i].Length > 4)
-            {
-                words[i] = new string(words[i].ToCharArray().Reverse().ToArray());
-            }
-            else
-            {
-                continue;
-            }
-        }
-        return string.Join(" ", words);
+        string pattern = (@"^[#][A-F|a-f|\d]{6}$");
+        return Regex.IsMatch(hex, pattern);
     }
 
     public static void Main(string[] args)
@@ -159,6 +170,7 @@ public class Program
         // Console.WriteLine(pr.Censored("Ch**s*, Gr*mm*t -- ch**s*", "eeeoieee"));
         // Console.WriteLine(pr.RemoveSmallest(new int[] { 1, 2, 3, 4, 5 }));
         // Console.WriteLine(pr.Interview(new int[] { 5, 5, 10, 15, 15, 20, 20 }, 120));
-        Console.WriteLine(pr.ReversedString("This is a typical sentence."));
+        // Console.WriteLine(pr.ReversedString("This is a typical sentence."));
+        Console.WriteLine(pr.IsValidHexCode("#CD5C&C"));
     }
 }
