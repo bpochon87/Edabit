@@ -143,32 +143,56 @@ public class Program
     //     return Regex.IsMatch(hex, pattern);
     // }
 
+    // // November 28, 2022
+    // // Hard
+
+    // // Create a function that takes in n, a, b, and returns the number of positive values raised to the nth power that lie
+    // // in the range [a, b] inclusively.
+
+    // public int PowerRanger(int power, int min, int max)
+    // {
+    //     int counter = 0;
+
+    //     for (int i = 1; Math.Pow(i, power) <= max; i++)
+    //     {
+    //         if (Math.Pow(i, power) >= min && Math.Pow(i, power) <= max)
+    //         {
+    //             counter++;
+    //         }
+    //         else
+    //         {
+    //             continue;
+    //         }
+    //     }
+    //     return counter;
+    // }
+
     // November 28, 2022
-    // Hard
+    // Very hard
 
-    // Create a function that takes in n, a, b, and returns the number of positive values raised to the nth power that lie
-    // in the range [a, b] inclusively.
+    // Create a function that takes an int and outputs an n x n square solely consisting of the int n.
+    // I found a solution that works on Edabit (below), however I would like to figure out how to print the 2d array to the console.
 
-    public int PowerRanger(int power, int min, int max)
+    public int[,] SquarePatch(int n)
     {
-        // Counter will keep track of positive raised powers in between the range.
-        // For loop iterating over the min, increasing min by 1 each time and breaking when min^n > max.
-        // For loop iterating over the max only once, as max + 1 is immediately over the bounds.
-        // I would like to do a while loop, but first figure this out.
-        int counter = 0;
+        int[,] grid = new int[n, n];
 
-        for (int i = 1; Math.Pow(i, power) <= max; i++)
+        if (n == 0) 
         {
-            if (Math.Pow(i, power) >= min && Math.Pow(i, power) <= max)
+            // Empty multidimensional array.
+            return (new int[,] {}); 
+        }
+        else
+        {
+            for (int i = 1; i < n; i++)
             {
-                counter++;
-            }
-            else
-            {
-                continue;
+                for (int j = 1; j < n; j++)
+                {
+                    grid[i, j] = n;
+                }
             }
         }
-        return counter;
+        return grid;
     }
 
 
@@ -201,6 +225,7 @@ public class Program
         // Console.WriteLine(pr.Interview(new int[] { 5, 5, 10, 15, 15, 20, 20 }, 120));
         // Console.WriteLine(pr.ReversedString("This is a typical sentence."));
         // Console.WriteLine(pr.IsValidHexCode("#CD5C&C"));
-        Console.WriteLine(pr.PowerRanger(2, 1, 100));
+        // Console.WriteLine(pr.PowerRanger(2, 1, 100));
+        System.Console.WriteLine(pr.SquarePatch(5));
     }
 }
