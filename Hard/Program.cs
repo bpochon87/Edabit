@@ -132,16 +132,45 @@ public class Program
     //     return string.Join(" ", words);
     // }
 
-    // November 23, 2022
+    // // November 23, 2022
+    // // Hard
+
+    // // Confirm that a given string is a hex code that is six characters long, starts with #, and has A-Fa-f or digits.
+
+    // public bool IsValidHexCode(string hex)
+    // {
+    //     string pattern = (@"^[#][A-F|a-f|\d]{6}$");
+    //     return Regex.IsMatch(hex, pattern);
+    // }
+
+    // November 28, 2022
     // Hard
 
-    // Confirm that a given string is a hex code that is six characters long, starts with #, and has A-Fa-f or digits.
+    // Create a function that takes in n, a, b, and returns the number of positive values raised to the nth power that lie
+    // in the range [a, b] inclusively.
 
-    public bool IsValidHexCode(string hex)
+    public int PowerRanger(int power, int min, int max)
     {
-        string pattern = (@"^[#][A-F|a-f|\d]{6}$");
-        return Regex.IsMatch(hex, pattern);
+        // Counter will keep track of positive raised powers in between the range.
+        // For loop iterating over the min, increasing min by 1 each time and breaking when min^n > max.
+        // For loop iterating over the max only once, as max + 1 is immediately over the bounds.
+        // I would like to do a while loop, but first figure this out.
+        int counter = 0;
+
+        for (int i = 1; Math.Pow(i, power) <= max; i++)
+        {
+            if (Math.Pow(i, power) >= min && Math.Pow(i, power) <= max)
+            {
+                counter++;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        return counter;
     }
+
 
     public static void Main(string[] args)
     {
@@ -171,6 +200,7 @@ public class Program
         // Console.WriteLine(pr.RemoveSmallest(new int[] { 1, 2, 3, 4, 5 }));
         // Console.WriteLine(pr.Interview(new int[] { 5, 5, 10, 15, 15, 20, 20 }, 120));
         // Console.WriteLine(pr.ReversedString("This is a typical sentence."));
-        Console.WriteLine(pr.IsValidHexCode("#CD5C&C"));
+        // Console.WriteLine(pr.IsValidHexCode("#CD5C&C"));
+        Console.WriteLine(pr.PowerRanger(2, 1, 100));
     }
 }
