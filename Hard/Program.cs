@@ -167,32 +167,75 @@ public class Program
     //     return counter;
     // }
 
-    // November 28, 2022
-    // Very hard
+    // // November 28, 2022
+    // // Very hard
 
-    // Create a function that takes an int and outputs an n x n square solely consisting of the int n.
-    // I found a solution that works on Edabit (below), however I would like to figure out how to print the 2d array to the console.
+    // // Create a function that takes an int and outputs an n x n square solely consisting of the int n.
+    // // I found a solution that works on Edabit (below), however I would like to figure out how to print the 2d array to the console.
 
-    public int[,] SquarePatch(int n)
+    // public int[,] SquarePatch(int n)
+    // {
+    //     int[,] grid = new int[n, n];
+
+    //     if (n == 0) 
+    //     {
+    //         // Empty multidimensional array.
+    //         return (new int[,] {}); 
+    //     }
+    //     else
+    //     {
+    //         for (int i = 1; i < n; i++)
+    //         {
+    //             for (int j = 1; j < n; j++)
+    //             {
+    //                 grid[i, j] = n;
+    //             }
+    //         }
+    //     }
+    //     return grid;
+    // }
+
+    // Very Hard
+    // December 2, 2022
+
+    // Create a function that returns the simplified version of a fraction (given as a string).
+
+    public string SimplifiedFraction(string fraction)
     {
-        int[,] grid = new int[n, n];
+        // Parse string and breakup into individual pieces.
+        // Convert those pieces to an int.
+        // Run a loop on both to see if divisible by two.
+        // Convert back to string and return.
+        string[] arr = fraction.Split('/');
+        int numerator = Convert.ToInt32(arr[0]);
+        int denominator = Convert.ToInt32(arr[1]);
 
-        if (n == 0) 
+        // Need to start dividing
+        if (numerator % 2 == 0 || numerator % 5 == 0)
         {
-            // Empty multidimensional array.
-            return (new int[,] {}); 
-        }
-        else
-        {
-            for (int i = 1; i < n; i++)
+            while (numerator % 2 == 0 && denominator % 2 == 0)
             {
-                for (int j = 1; j < n; j++)
+                numerator /= 2;
+                denominator /= 2;
+
+                if (denominator == 1)
                 {
-                    grid[i, j] = n;
+                    return $"{Convert.ToString(numerator)}";
                 }
             }
+            while (numerator % 5 == 0 && denominator % 5 == 0)
+            {
+                numerator /= 5;
+                denominator /=5;
+                
+                if (denominator == 1)
+                {
+                    return $"{Convert.ToString(numerator)}";
+                }
+            }
+
         }
-        return grid;
+        return $"{Convert.ToString(numerator)}/{Convert.ToString(denominator)}";
     }
 
 
@@ -226,6 +269,7 @@ public class Program
         // Console.WriteLine(pr.ReversedString("This is a typical sentence."));
         // Console.WriteLine(pr.IsValidHexCode("#CD5C&C"));
         // Console.WriteLine(pr.PowerRanger(2, 1, 100));
-        System.Console.WriteLine(pr.SquarePatch(5));
+        // System.Console.WriteLine(pr.SquarePatch(5));
+        System.Console.WriteLine(pr.SimplifiedFraction("50/25"));
     }
 }
