@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -195,47 +196,63 @@ public class Program
     //     return grid;
     // }
 
-    // Very Hard
-    // December 2, 2022
+    // // Very Hard
+    // // December 2, 2022
 
-    // Create a function that returns the simplified version of a fraction (given as a string).
+    // // Create a function that returns the simplified version of a fraction (given as a string).
 
-    public string SimplifiedFraction(string fraction)
-    {
-        // Parse string and breakup into individual pieces.
-        // Convert those pieces to an int.
-        // Run a loop on both to see if divisible by two.
-        // Convert back to string and return.
-        string[] arr = fraction.Split('/');
-        int numerator = Convert.ToInt32(arr[0]);
-        int denominator = Convert.ToInt32(arr[1]);
+    // public string SimplifiedFraction(string fraction)
+    // {
+    //     // Parse string and breakup into individual pieces.
+    //     // Convert those pieces to an int.
+    //     // Run a loop on both to see if divisible by two.
+    //     // Convert back to string and return.
+    //     string[] arr = fraction.Split('/');
+    //     int numerator = Convert.ToInt32(arr[0]);
+    //     int denominator = Convert.ToInt32(arr[1]);
 
-        // Need to start dividing
-        if (numerator % 2 == 0 || numerator % 5 == 0)
-        {
-            while (numerator % 2 == 0 && denominator % 2 == 0)
-            {
-                numerator /= 2;
-                denominator /= 2;
+    //     // Need to start dividing
+    //     if (numerator % 2 == 0 || numerator % 5 == 0)
+    //     {
+    //         while (numerator % 2 == 0 && denominator % 2 == 0)
+    //         {
+    //             numerator /= 2;
+    //             denominator /= 2;
 
-                if (denominator == 1)
-                {
-                    return $"{Convert.ToString(numerator)}";
-                }
-            }
-            while (numerator % 5 == 0 && denominator % 5 == 0)
-            {
-                numerator /= 5;
-                denominator /=5;
+    //             if (denominator == 1)
+    //             {
+    //                 return $"{Convert.ToString(numerator)}";
+    //             }
+    //         }
+    //         while (numerator % 5 == 0 && denominator % 5 == 0)
+    //         {
+    //             numerator /= 5;
+    //             denominator /=5;
                 
-                if (denominator == 1)
-                {
-                    return $"{Convert.ToString(numerator)}";
-                }
-            }
+    //             if (denominator == 1)
+    //             {
+    //                 return $"{Convert.ToString(numerator)}";
+    //             }
+    //         }
 
+    //     }
+    //     return $"{Convert.ToString(numerator)}/{Convert.ToString(denominator)}";
+    // }
+
+    // Hard
+    // December 6, 2022
+
+    // Decompose a given integer into its separate digits. Then add together said digits. They'll be "Evenish" for evens and "Oddish" for odds.
+
+    public string OddishEvenish(int num)
+    {
+        int total = 0;
+        while (num > 0)
+        {
+            total += num % 10;
+            num /= 10;
         }
-        return $"{Convert.ToString(numerator)}/{Convert.ToString(denominator)}";
+        return total % 2 == 0 ? "Evenish" : "Oddish";
     }
 
 
@@ -270,6 +287,7 @@ public class Program
         // Console.WriteLine(pr.IsValidHexCode("#CD5C&C"));
         // Console.WriteLine(pr.PowerRanger(2, 1, 100));
         // System.Console.WriteLine(pr.SquarePatch(5));
-        System.Console.WriteLine(pr.SimplifiedFraction("50/25"));
+        // System.Console.WriteLine(pr.SimplifiedFraction("50/25"));
+        Console.WriteLine(pr.OddishEvenish(555555555));
     }
 }
