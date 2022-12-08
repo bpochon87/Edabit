@@ -239,22 +239,63 @@ public class Program
     //     return $"{Convert.ToString(numerator)}/{Convert.ToString(denominator)}";
     // }
 
-    // Hard
-    // December 6, 2022
+    // // Hard
+    // // December 6, 2022
 
-    // Decompose a given integer into its separate digits. Then add together said digits. They'll be "Evenish" for evens and "Oddish" for odds.
+    // // Decompose a given integer into its separate digits. Then add together said digits. They'll be "Evenish" for evens and "Oddish" for odds.
 
-    public string OddishEvenish(int num)
+    // public string OddishEvenish(int num)
+    // {
+    //     int total = 0;
+    //     while (num > 0)
+    //     {
+    //         total += num % 10;
+    //         num /= 10;
+    //     }
+    //     return total % 2 == 0 ? "Evenish" : "Oddish";
+    // }
+
+    // Very Hard
+    // December 8, 2022
+
+    // Write a binary search algorithm that returns whether or not the given int is found within the given array of primes.
+
+    public bool BinarySearch(int num)
     {
-        int total = 0;
-        while (num > 0)
+        int[] primes = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
+
+        int low = 0;
+        int high = primes.Length - 1;
+
+        while (low <= high)
         {
-            total += num % 10;
-            num /= 10;
+            int mid = (low + high) / 2;
+
+            if (primes[mid] == num)
+            {
+                return true;
+            }
+            else if (primes[mid] < num)
+            {
+                low = mid + 1;
+            }
+            else if (primes[mid] > num)
+            {
+                high = mid - 1;
+            }
         }
-        return total % 2 == 0 ? "Evenish" : "Oddish";
+        return false;
     }
 
+    // Very Hard
+    // December 8, 2022
+
+    // Create a function that takes a number n as an arg and returns the first n elements of the Fibonacci Word sequence.
+
+    // public string FiboWord(int n)
+    // {
+
+    // }
 
     public static void Main(string[] args)
     {
@@ -288,6 +329,7 @@ public class Program
         // Console.WriteLine(pr.PowerRanger(2, 1, 100));
         // System.Console.WriteLine(pr.SquarePatch(5));
         // System.Console.WriteLine(pr.SimplifiedFraction("50/25"));
-        Console.WriteLine(pr.OddishEvenish(555555555));
+        // Console.WriteLine(pr.OddishEvenish(555555555));
+        Console.WriteLine(pr.BinarySearch(2));
     }
 }
