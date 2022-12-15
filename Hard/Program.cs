@@ -255,46 +255,36 @@ public class Program
     //     return total % 2 == 0 ? "Evenish" : "Oddish";
     // }
 
-    // Very Hard
-    // December 8, 2022
+    // // Very Hard
+    // // December 8, 2022
 
-    // Write a binary search algorithm that returns whether or not the given int is found within the given array of primes.
+    // // Write a binary search algorithm that returns whether or not the given int is found within the given array of primes.
 
-    public bool BinarySearch(int num)
-    {
-        int[] primes = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
-
-        int low = 0;
-        int high = primes.Length - 1;
-
-        while (low <= high)
-        {
-            int mid = (low + high) / 2;
-
-            if (primes[mid] == num)
-            {
-                return true;
-            }
-            else if (primes[mid] < num)
-            {
-                low = mid + 1;
-            }
-            else if (primes[mid] > num)
-            {
-                high = mid - 1;
-            }
-        }
-        return false;
-    }
-
-    // Very Hard
-    // December 8, 2022
-
-    // Create a function that takes a number n as an arg and returns the first n elements of the Fibonacci Word sequence.
-
-    // public string FiboWord(int n)
+    // public bool BinarySearch(int num)
     // {
+    //     int[] primes = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
 
+    //     int low = 0;
+    //     int high = primes.Length - 1;
+
+    //     while (low <= high)
+    //     {
+    //         int mid = (low + high) / 2;
+
+    //         if (primes[mid] == num)
+    //         {
+    //             return true;
+    //         }
+    //         else if (primes[mid] < num)
+    //         {
+    //             low = mid + 1;
+    //         }
+    //         else if (primes[mid] > num)
+    //         {
+    //             high = mid - 1;
+    //         }
+    //     }
+    //     return false;
     // }
 
     public static void Main(string[] args)
@@ -330,6 +320,6 @@ public class Program
         // System.Console.WriteLine(pr.SquarePatch(5));
         // System.Console.WriteLine(pr.SimplifiedFraction("50/25"));
         // Console.WriteLine(pr.OddishEvenish(555555555));
-        Console.WriteLine(pr.BinarySearch(2));
+        // Console.WriteLine(pr.BinarySearch(2));
     }
 }

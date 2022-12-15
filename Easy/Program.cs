@@ -1,6 +1,8 @@
 ﻿// June 14, 2022
 // Easy
 
+using System.Text;
+
 public class Program
 {
     // Find factorial of given number.
@@ -306,10 +308,44 @@ public class Program
         System.Console.WriteLine($"The cumulatively-added array is: {String.Join(", ", arr)}");
     }
 
+    // Create a function that takes a string and returns a new string with its first and last chars swapped.
+    // If length < 2, return 'Incompatible'
+    // If arg is not a string, return 'Incompatible'
+    // If first and last chars are the same, return 'Two's a pair'.
 
+    public string FlipEndChars(object str)
+    {
+        // Variable to allow us access to Equals method.
+        Type t = str.GetType();
 
+        // Check if type of str is string and that it isn't null.
+        if (!t.Equals(typeof(string)) || str == null)
+        {
+            return "Incompatible";
+        }
+        else
+        {
+            // Convert arg to string.
+            string str1 = str.ToString();
 
-    
+            if (str1.Length < 2)
+            {
+                return "Incompatible";
+            }
+            else if (str1[0] == str1[str1.Length - 1])
+            {
+                return "Two's a pair";
+            }
+            else
+            {
+                StringBuilder sb = new StringBuilder(str1);
+                var tmp = sb[0];
+                sb.Replace(sb[0], sb[sb.Length - 1]);
+                sb.Replace(sb[sb.Length - 1], tmp, sb.Length - 1, 1);
+                return sb.ToString();
+            }
+        }
+    }
     
     public static void Main(string[] args)
     {
@@ -328,7 +364,8 @@ public class Program
         // pr.GreaterThanOne();
         // pr.FindMovieTitle();
         // pr.CountOnes();
-        pr.CumulativeSum();
+        // pr.CumulativeSum();
+        Console.WriteLine(pr.FlipEndChars("dfdkf49824fdfdfjhd"));
     }
 
 
