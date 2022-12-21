@@ -287,6 +287,23 @@ public class Program
     //     return false;
     // }
 
+    // Hard
+    // Three cups: A, B, and C. Ball starts under cup B. A swap to cup A will look like AB or BA. A swap to cup C will look like
+    // BC or CB. From there, a swap to another cup has to include the current cup. AB, BC, AC, BA, CB, CA.
+    public string CupSwap(string[] swaps)
+    {
+        string currCup = "B";
+        for (int i = 0; i < swaps.Length; i++)
+        {
+            if (swaps[i].Contains(currCup))
+            {
+                currCup = swaps[i].Remove(swaps[i].IndexOf(currCup), 1);
+            }
+            else continue;
+        }
+        return currCup;
+    }
+
     public static void Main(string[] args)
     {
         Program pr = new Program();
@@ -321,5 +338,6 @@ public class Program
         // System.Console.WriteLine(pr.SimplifiedFraction("50/25"));
         // Console.WriteLine(pr.OddishEvenish(555555555));
         // Console.WriteLine(pr.BinarySearch(2));
+        Console.WriteLine(pr.CupSwap(new string[] {"BC", "CB", "CA", "BA"}));
     }
 }

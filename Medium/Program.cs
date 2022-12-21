@@ -341,28 +341,28 @@ public class Program
     //     }
     // }
 
-    // November 18, 2022
-    // Medium
+    // // November 18, 2022
+    // // Medium
 
-    // Check string to see if it's a palindrome.
+    // // Check string to see if it's a palindrome.
 
-    public bool IsPalindrome(string str)
-    {
-        str.ToLower();
-        string newStr = String.Join("", str.Where(char.IsLetterOrDigit));
-        for (int i = 0, j = newStr.Length - 1; i < newStr.Length; i++, j--)
-        {
-            if (newStr[i] == newStr[j])
-            {
-                continue;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        return true;
-    }
+    // public bool IsPalindrome(string str)
+    // {
+    //     str.ToLower();
+    //     string newStr = String.Join("", str.Where(char.IsLetterOrDigit));
+    //     for (int i = 0, j = newStr.Length - 1; i < newStr.Length; i++, j--)
+    //     {
+    //         if (newStr[i] == newStr[j])
+    //         {
+    //             continue;
+    //         }
+    //         else
+    //         {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
 
     public static void Main()
     {
@@ -382,6 +382,6 @@ public class Program
         // pr.Accum();
         // pr.MakeTitle();
         // Console.WriteLine(pr.IsEmail("ann@edabit.com"));
-        Console.WriteLine(pr.IsPalindrome("Neuquen"));
+        // Console.WriteLine(pr.IsPalindrome("Neuquen"));
     }
 }

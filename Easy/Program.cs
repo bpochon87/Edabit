@@ -365,7 +365,7 @@ public class Program
         // pr.FindMovieTitle();
         // pr.CountOnes();
         // pr.CumulativeSum();
-        Console.WriteLine(pr.FlipEndChars("dfdkf49824fdfdfjhd"));
+        // Console.WriteLine(pr.FlipEndChars("dfdkf49824fdfdfjhd"));
     }
 
 
