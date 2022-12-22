@@ -288,6 +288,8 @@ public class Program
     // }
 
     // Hard
+    // December 21, 2022
+
     // Three cups: A, B, and C. Ball starts under cup B. A swap to cup A will look like AB or BA. A swap to cup C will look like
     // BC or CB. From there, a swap to another cup has to include the current cup. AB, BC, AC, BA, CB, CA.
     public string CupSwap(string[] swaps)
@@ -302,6 +304,32 @@ public class Program
             else continue;
         }
         return currCup;
+    }
+
+    // Hard
+    // December 22, 2022
+
+    // Create a function that determines whether elements in an array can be re-arranged to form a consecutive list of numbers where each number appears exactly once.
+
+    public bool Consecutive(int[] arr)
+    {
+        List<int> numList = arr.ToList();
+        numList.Sort();
+
+        if (numList.Count != numList.Distinct().ToList().Count)
+        {
+            return false;
+        }
+        
+
+        for (int i = 0; i < numList.Count - 1; i++)
+        {
+            if ((numList[i + 1]) - numList[i] > 1)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void Main(string[] args)
@@ -338,6 +366,7 @@ public class Program
         // System.Console.WriteLine(pr.SimplifiedFraction("50/25"));
         // Console.WriteLine(pr.OddishEvenish(555555555));
         // Console.WriteLine(pr.BinarySearch(2));
-        Console.WriteLine(pr.CupSwap(new string[] {"BC", "CB", "CA", "BA"}));
+        // Console.WriteLine(pr.CupSwap(new string[] {"BC", "CB", "CA", "BA"}));
+        Console.WriteLine(pr.Consecutive(new int[] { 55, 59, 58, 55, 55 }));
     }
 }
