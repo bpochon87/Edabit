@@ -306,28 +306,65 @@ public class Program
         return currCup;
     }
 
-    // Hard
-    // December 22, 2022
+    // // Hard
+    // // December 22, 2022
 
-    // Create a function that determines whether elements in an array can be re-arranged to form a consecutive list of numbers where each number appears exactly once.
+    // // Create a function that determines whether elements in an array can be re-arranged to form a consecutive list of numbers where each number appears exactly once.
 
-    public bool Consecutive(int[] arr)
-    {
-        List<int> numList = arr.ToList();
-        numList.Sort();
+    // public bool Consecutive(int[] arr)
+    // {
+    //     List<int> numList = arr.ToList();
+    //     numList.Sort();
 
-        if (numList.Count != numList.Distinct().ToList().Count)
-        {
-            return false;
-        }
+    //     if (numList.Count != numList.Distinct().ToList().Count)
+    //     {
+    //         return false;
+    //     }
         
 
-        for (int i = 0; i < numList.Count - 1; i++)
+    //     for (int i = 0; i < numList.Count - 1; i++)
+    //     {
+    //         if ((numList[i + 1]) - numList[i] > 1)
+    //         {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+    // // Hard
+    // // December 23, 2022
+
+    // // Some fancy description of a pirate ship traveling via an array goes here. Basically, the int[] contains the
+    // // days that the ship traveled. For every 5 days, 1 extra day is to be added.
+
+    // public int Pirate(int[] coordinates)
+    // {
+    //     int daysTotal = 0;
+    //     foreach (int x in coordinates)
+    //     {
+    //         daysTotal += Math.Abs(x);
+    //     }
+    //     return daysTotal += daysTotal / 5;
+        
+    // }
+
+    // Hard
+    // December 23, 2022
+
+    // Create a function that takes two strings and returns either true or false depending on whether they're anagrams or not.
+
+    public bool Anagram(string str1, string str2)
+    {
+        var str1Join = String.Join("", str1).ToLower().OrderBy(c => c).ToList();
+        var str2Join = String.Join("", str2).ToLower().OrderBy(c => c).ToList();
+        for (int i = 0; i < str1Join.Count; i++)
         {
-            if ((numList[i + 1]) - numList[i] > 1)
+            if (str1Join[i] == str2Join[i])
             {
-                return false;
+                continue;
             }
+            else return false;
         }
         return true;
     }
@@ -367,6 +404,8 @@ public class Program
         // Console.WriteLine(pr.OddishEvenish(555555555));
         // Console.WriteLine(pr.BinarySearch(2));
         // Console.WriteLine(pr.CupSwap(new string[] {"BC", "CB", "CA", "BA"}));
-        Console.WriteLine(pr.Consecutive(new int[] { 55, 59, 58, 55, 55 }));
+        // Console.WriteLine(pr.Consecutive(new int[] { 55, 59, 58, 55, 55 }));
+        // Console.WriteLine(pr.Pirate(new int[] {10, 9}));
+        Console.WriteLine(pr.Anagram("cristian", "Cristina"));
     }
 }
