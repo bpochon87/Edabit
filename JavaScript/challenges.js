@@ -30,4 +30,27 @@ const findTrues = (arr) =>
     return counter;
   };
 
-trues([true, false, false, false, true]);
+findTrues([true, false, false, false, true]);
+
+// December 22, 2022
+// Hard
+
+// Return true if array contains the digit 7, false otherwise.
+
+const containsSeven = (arr) =>
+  arr.join("").includes(7)
+    ? "Boom!"
+    : "None of the items contain 7 within them.";
+containsSeven([1, 2, 3, 4, 5, 6, 1070]);
+
+// December 24, 2022
+// Easy
+
+// Create a function that takes an array of non-negative ints and strings and returns a new array without the strings.
+
+const noStrings = function (arr) {
+  const stringless = arr.filter((x) => typeof x != "string");
+  return stringless;
+};
+
+noStrings([1, 2, "a", "b"]);
