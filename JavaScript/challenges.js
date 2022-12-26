@@ -54,3 +54,36 @@ const noStrings = function (arr) {
 };
 
 noStrings([1, 2, "a", "b"]);
+
+// December 26, 2022
+// Medium
+
+// Identify all subarrays of length 3 with 0 and 2 position being same number.
+
+// Notes: I struggled in that I was missing my brackets while passing in the array of args. A simple syntax error which caused
+// a bit of frustration because, while the debugger was running, it would skip the entire function body.
+
+const boomerang = function (arr) {
+  let count = 0;
+
+  for (let i = 0, j = 3; j <= arr.length; i++, j++) {
+    const sub = arr.slice(i, j);
+    if (sub[0] === sub[2] && sub[1] !== sub[0]) {
+      count += 1;
+    }
+  }
+  return count;
+};
+boomerang([5, 9, 5, 9, 5]);
+
+// December 26, 2022
+// Hard
+
+// Return whether or not the summed digits of a single integer are even or odd.
+// NEED TO FIND SOLUTION. THIS DOESN'T PASS TESTS.
+
+const oddishEvenish = function (num) {
+  let sum = ((num - 1) % 9) + 2;
+  return sum % 2 === 0 ? "Evenish" : "Oddish";
+};
+oddishEvenish(4433);

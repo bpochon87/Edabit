@@ -349,24 +349,63 @@ public class Program
         
     // }
 
+    // // Hard
+    // // December 23, 2022
+
+    // // Create a function that takes two strings and returns either true or false depending on whether they're anagrams or not.
+
+    // public bool Anagram(string str1, string str2)
+    // {
+    //     var str1Join = String.Join("", str1).ToLower().OrderBy(c => c).ToList();
+    //     var str2Join = String.Join("", str2).ToLower().OrderBy(c => c).ToList();
+    //     for (int i = 0; i < str1Join.Count; i++)
+    //     {
+    //         if (str1Join[i] == str2Join[i])
+    //         {
+    //             continue;
+    //         }
+    //         else return false;
+    //     }
+    //     return true;
+    // }
+
     // Hard
-    // December 23, 2022
+    // December 26, 2022
 
-    // Create a function that takes two strings and returns either true or false depending on whether they're anagrams or not.
+    // Given an int, create a function that returns the next prime. If the number is prime, return the number itself.
 
-    public bool Anagram(string str1, string str2)
+    public int IsPrime(int n)
     {
-        var str1Join = String.Join("", str1).ToLower().OrderBy(c => c).ToList();
-        var str2Join = String.Join("", str2).ToLower().OrderBy(c => c).ToList();
-        for (int i = 0; i < str1Join.Count; i++)
+        while (n % 2 == 0 || n % 3 == 0 || n % 5 == 0)
         {
-            if (str1Join[i] == str2Join[i])
-            {
-                continue;
-            }
-            else return false;
+            n += 1;
         }
-        return true;
+        return n;
+    }
+
+    // Hard
+    // December 26, 2022
+
+    // Create a function that takes an int array and returns the biggest between positive sum, negative sum, or 0s count. The major is
+    // understood as the greatest absolute.
+
+    public int MajorSum(int[] arr)
+    {
+        // List<int> values = new List<int>{};
+        var values = new Dictionary<string, int>()
+        {
+            {"pos", Array.FindAll(arr, x => x > 0).Sum()},
+            {"neg", Array.FindAll(arr, x => x < 0).Sum()},
+            {"zeroes", Array.FindAll(arr, x => x == 0).Count()}
+        };
+        if (values["pos"] > Math.Abs(values["neg"]))
+        {
+            return values["pos"] > values["zeroes"] ? values["pos"] : values["zeroes"];
+        }
+        else
+        {
+            return Math.Abs(values["neg"]) > values["zeroes"] ? values["neg"] : values["zeroes"];
+        }
     }
 
     public static void Main(string[] args)
@@ -406,6 +445,8 @@ public class Program
         // Console.WriteLine(pr.CupSwap(new string[] {"BC", "CB", "CA", "BA"}));
         // Console.WriteLine(pr.Consecutive(new int[] { 55, 59, 58, 55, 55 }));
         // Console.WriteLine(pr.Pirate(new int[] {10, 9}));
-        Console.WriteLine(pr.Anagram("cristian", "Cristina"));
+        // Console.WriteLine(pr.Anagram("cristian", "Cristina"));
+        Console.WriteLine(pr.IsPrime(33));
+        Console.WriteLine(pr.MajorSum(new int[] {10,-12,4,0,-3,-7,-91,45}));
     }
 }
