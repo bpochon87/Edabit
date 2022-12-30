@@ -408,6 +408,45 @@ public class Program
         }
     }
 
+    // Hard
+    // December 30, 2022 
+
+    // A robot is given instructions followed by an integer: right, left, up, down. The starting coordinates are [0, 0] and the final representation will be
+    // negative in the x coord (for left), positive x coord (right), negative y coord (down), positive y-coord (up).
+    public int[] TrackRobot(string[] arr)
+    {
+        int left, right, up, down;
+        left = right = up = down = 0;
+        int[] resultArr = new int[2];
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i][0] == 'l')
+            {
+                int digit = Convert.ToInt32(Regex.Match(arr[i], @"\d+").Value);
+                left += -digit;
+            }
+            if (arr[i][0] == 'r')
+            {
+                int digit = Convert.ToInt32(Regex.Match(arr[i], @"\d+").Value);
+                right += digit;
+            }
+            if (arr[i][0] == 'u')
+            {
+                int digit = Convert.ToInt32(Regex.Match(arr[i], @"\d+").Value);
+                up += digit;
+            }
+            if (arr[i][0] == 'd')
+            {
+                int digit = Convert.ToInt32(Regex.Match(arr[i], @"\d+").Value);
+                down += -digit;
+            }
+        }
+        resultArr[0] = (left + right);
+        resultArr[1] = (up + down);
+        return resultArr;
+    }
+
     public static void Main(string[] args)
     {
         Program pr = new Program();
@@ -446,7 +485,8 @@ public class Program
         // Console.WriteLine(pr.Consecutive(new int[] { 55, 59, 58, 55, 55 }));
         // Console.WriteLine(pr.Pirate(new int[] {10, 9}));
         // Console.WriteLine(pr.Anagram("cristian", "Cristina"));
-        Console.WriteLine(pr.IsPrime(33));
-        Console.WriteLine(pr.MajorSum(new int[] {10,-12,4,0,-3,-7,-91,45}));
+        // Console.WriteLine(pr.IsPrime(33));
+        // Console.WriteLine(pr.MajorSum(new int[] {10,-12,4,0,-3,-7,-91,45}));
+        pr.TrackRobot(new string[] {});
     }
 }
